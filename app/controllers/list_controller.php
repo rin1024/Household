@@ -1,7 +1,7 @@
 <?php
 class ListController extends AppController {
   var $name = 'Main';
-  var $uses = array('Category', 'Record', 'User');
+  var $uses = array('MasterCategory', 'Record', 'User');
   var $paginate = array(
     'limit' => 20,
     'order' => array(
@@ -25,9 +25,9 @@ class ListController extends AppController {
     }
 
     // カテゴリ一覧
-    $categories = $this->Category->find(
+    $categories = $this->MasterCategory->find(
       'list',
-      array('Category,id', 'Category.name'));
+      array('MasterCategory,id', 'MasterCategory.name'));
 
     // 家計簿一覧
     // 第三引数(whitelist)は許可するurlからのパラメータ(sortとか)
