@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # メンテナンス用
+    #RewriteRule    ^$ maintenance.html    [L]
+    #RewriteRule    (.*) maintenance.html [L]
+    # 通常用
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+# 認証制限
+AuthType Basic
+AuthName "Please input password"
+AuthUserFile /var/www/household/app/webroot/.htpasswd
+require valid-user
+
+# アクセス制限
+#Deny from all
+#Allow from 192.			# local

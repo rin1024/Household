@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*----------------------------------------------------
+ elements
+----------------------------------------------------*/
+body {
+	background: #ccc;
+	color: #333;
+	font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	-webkit-text-size-adjust: none; /* フォントサイズ自動調整 */
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(200,200,555,.6);
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img:not([width]) {
+	zoom: .5; /* Retinaディスプレイ対応のためimg要素は半分の大きさに */
+}
+
+p, dl, ol, ul {
+	margin-bottom: 10px;
+}
+
+ol, ul {
+	margin-left: 25px;
+}
+
+
+/*----------------------------------------------------
+ #page
+----------------------------------------------------*/
+#page {
+	overflow: hidden;
+	width: 320px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+/*----------------------------------------------------
+ ランドスケープ表示
+----------------------------------------------------*/
+@media all and (orientation:landscape) {
+	#page {
+		width: 480px;
+	}
+}
+
+
+/*----------------------------------------------------
+ header
+----------------------------------------------------*/
+header.global {
+	padding: 10px 0;
+}
+
+header.global h1 {
+	padding: 0 10px 10px;
+}
+
+header.global nav {
+	margin: 0;
+}
+
+header.global nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+header.global nav ul li {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	width: 30%;
+	margin: 0;
+	text-align: center;
+	background: #eee;
+	border-right: 1px solid #fff;
+}
+
+header.global nav ul li:last-child {
+	border-right: 0;
+}
+
+header.global nav ul li a {
+	display: block;
+	padding: 5px;
+}
+
+
+/*----------------------------------------------------
+ footer
+----------------------------------------------------*/
+footer.global {
+	padding: 10px 0 50px;
+	background: #333;
+	color: #fff;
+}
+
+footer.global p.copyright {
+	margin: 0;
+	text-align: center;
+}
+
+
+/*----------------------------------------------------
+ main
+----------------------------------------------------*/
+section.main {
+	padding: 0 10px 10px;
+}
+
+
+/*----------------------------------------------------
+ clearfix
+----------------------------------------------------*/
+header.global nav ul:after { content: ''; display: block; clear: both; }
+
+
+

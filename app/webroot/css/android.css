@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*----------------------------------------------------
+ Android—p‚ÌCSS
+----------------------------------------------------*/
+
+@media all and (orientation:landscape) {
+	#page {
+		-moz-box-shadow: 3px 0px 5px rgba(0,0,0,.3), -3px 0px 5px rgba(0,0,0,.3);
+		-webkit-box-shadow: 3px 0px 5px rgba(0,0,0,.3), -3px 0px 5px rgba(0,0,0,.3);
+		box-shadow: 3px 0px 5px rgba(0,0,0,.3), -3px 0px 5px rgba(0,0,0,.3);
+	}
+}

@@ -1,0 +1,10 @@
+費用	expense
+収入	income
+
+銀行	bank
+財布	wallet
+	クレジットカード	creditcard
+
+
+
+
