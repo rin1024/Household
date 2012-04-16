@@ -12,7 +12,7 @@
 # 認証制限
 AuthType Basic
 AuthName "Please input password"
-AuthUserFile /var/www/household/app/webroot/.htpasswd
+AuthUserFile /etc/httpd/htpasswd.d/household
 require valid-user
 
 # アクセス制限
